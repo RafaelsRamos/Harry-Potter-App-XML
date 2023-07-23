@@ -1,6 +1,8 @@
 [versions]
 agp = "8.2.0-alpha13"
 kotlin = "1.8.21"
+hilt-android = "2.44"
+androidx-hilt = "1.0.0"
 core-ktx = "1.9.0"
 junit = "4.13.2"
 androidx-test-ext-junit = "1.1.5"
@@ -14,6 +16,9 @@ okhttp = "4.11.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android" , version.ref = "hilt-android" }
+hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt-android" }
+androidx-hilt-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "androidx-hilt" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
@@ -28,4 +33,6 @@ square_okhttp_logging = { group = "com.squareup.okhttp3", name = "logging-interc
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "org-jetbrains-kotlin-jvm" }
+dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt-android" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
 
