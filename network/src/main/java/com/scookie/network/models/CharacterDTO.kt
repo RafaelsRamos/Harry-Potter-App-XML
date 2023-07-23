@@ -1,6 +1,7 @@
 package com.scookie.network.models
 
 import com.google.gson.annotations.SerializedName
+import com.scookie.domainmodel.Character
 
 data class CharacterDTO(
 
@@ -9,6 +10,9 @@ data class CharacterDTO(
 
     @SerializedName("name")
     val name: String = "",
+
+    @SerializedName("wand")
+    val wand: WandDTO? = WandDTO(),
 
     @SerializedName("alternate_names")
     val alternateNames: List<String> = emptyList(),
@@ -38,7 +42,7 @@ data class CharacterDTO(
     val house: String = "",
 
     @SerializedName("dateOfBirth")
-    val dateOfBirth: String = "",
+    val dateOfBirth: String? = "",
 
     @SerializedName("yearOfBirth")
     val yearOfBirth: Int = -1,
@@ -52,9 +56,6 @@ data class CharacterDTO(
     @SerializedName("hairColour")
     val hairColour: String = "",
 
-    @SerializedName("wand")
-    val wand: WandDTO? = WandDTO(),
-
     @SerializedName("patronus")
     val patronus: String = "",
 
@@ -64,4 +65,27 @@ data class CharacterDTO(
     @SerializedName("image")
     val image: String = ""
 
+)
+
+fun CharacterDTO.toModel() = Character(
+    id = id,
+    name = name,
+    wand = wand?.toModel(),
+    alternateNames = alternateNames,
+    alternateActors = alternateActors,
+    wizard = wizard,
+    hogwartsStudent = hogwartsStudent,
+    hogwartsStaff = hogwartsStaff,
+    alive = alive,
+    species = species,
+    gender = gender,
+    house = house,
+    dateOfBirth = dateOfBirth,
+    yearOfBirth = yearOfBirth,
+    ancestry = ancestry,
+    eyeColour = eyeColour,
+    hairColour = hairColour,
+    patronus = patronus,
+    actor = actor,
+    image = image,
 )

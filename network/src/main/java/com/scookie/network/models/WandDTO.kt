@@ -1,6 +1,7 @@
 package com.scookie.network.models
 
 import com.google.gson.annotations.SerializedName
+import com.scookie.domainmodel.Wand
 
 data class WandDTO(
 
@@ -13,4 +14,10 @@ data class WandDTO(
     @SerializedName("length")
     val length: Float = 0F
 
+)
+
+fun WandDTO.toModel() = Wand(
+    wood = wood,
+    core = core,
+    length = length
 )
