@@ -17,4 +17,13 @@ class CharactersRepositoryImpl @Inject constructor(
 
     }
 
+    override suspend fun getCharacter(id: String): Character {
+
+        return charactersNetwork
+            .getCharacter(id)
+            .first()
+            .toModel()
+
+    }
+
 }

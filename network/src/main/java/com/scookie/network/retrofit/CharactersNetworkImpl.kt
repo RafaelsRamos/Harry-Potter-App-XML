@@ -13,4 +13,8 @@ internal class CharactersNetworkImpl @Inject constructor(): CharactersNetwork {
         return charactersAPI.getAllCharacters()
     }
 
+    override suspend fun getCharacter(id: String): List<CharacterDTO> {
+        return charactersAPI.getCharacter(id)
+    }
+
 }

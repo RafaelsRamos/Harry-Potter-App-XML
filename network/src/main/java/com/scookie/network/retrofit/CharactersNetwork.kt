@@ -6,4 +6,6 @@ interface CharactersNetwork {
 
     suspend fun getAllCharacters(): List<CharacterDTO>
 
+    suspend fun getCharacter(id: String): List<CharacterDTO>
+
 }
