@@ -47,8 +47,11 @@ android {
 dependencies {
 
     implementation(project(":data"))
+    implementation(project(":feature:characterlisting"))
 
     implementation(libs.hilt.android)
+    implementation(project(":navigation"))
+    implementation(project(":feature:characterdetails"))
     kapt(libs.hilt.android.compiler)
     kapt(libs.androidx.hilt.compiler)
 
