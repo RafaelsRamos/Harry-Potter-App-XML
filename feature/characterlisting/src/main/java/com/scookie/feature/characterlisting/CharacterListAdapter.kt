@@ -68,7 +68,7 @@ class CharacterListAdapter(
                 .load(url)
                 .transition(DrawableTransitionOptions.withCrossFade(200))
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .placeholder(R.drawable.character_placeholder)
+                .error(R.drawable.character_placeholder)
                 .into(this)
 
         }

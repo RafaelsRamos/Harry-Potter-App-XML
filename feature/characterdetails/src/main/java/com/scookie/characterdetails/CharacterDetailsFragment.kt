@@ -9,7 +9,6 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.scookie.data.repositories.characters.CharactersRepository
 import com.scookie.domainmodel.Character
 import com.scookie.feature.characterdetails.R
@@ -92,13 +91,12 @@ class CharacterDetailsFragment: Fragment(R.layout.screen_character_details) {
     }
 
     private fun ImageView.loadImageFrom(url: String) {
+        this.visibility = View.VISIBLE
         Glide.with(context)
             .load(url)
-            .transition(DrawableTransitionOptions.withCrossFade(200))
             .diskCacheStrategy(DiskCacheStrategy.ALL)
-            .placeholder(R.drawable.character_placeholder)
+            .error(R.drawable.character_placeholder)
             .into(this)
-
     }
 
     private fun Boolean.toYesNoString() = if (this == true) "Yes" else "No"
