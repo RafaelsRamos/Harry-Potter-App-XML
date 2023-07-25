@@ -13,9 +13,9 @@ constraintlayout = "2.1.4"
 org-jetbrains-kotlin-jvm = "1.8.21"
 retrofit = "2.9.0"
 okhttp = "4.11.0"
-navigation-common-ktx = "2.6.0"
 glide = "4.15.1"
 material3 = "1.9.0"
+room = "2.5.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -31,8 +31,10 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 square_retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 square_converter_gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
 square_okhttp_logging = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
-androidx-navigation-common-ktx = { group = "androidx.navigation", name = "navigation-common-ktx", version.ref = "navigation-common-ktx" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+room = { group = "androidx.room", name = "room-common", version.ref = "room" }
+room_ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room_compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 google_material3 = { group = "com.google.android.material", name = "material", version.ref = "material3" }
 
 [plugins]

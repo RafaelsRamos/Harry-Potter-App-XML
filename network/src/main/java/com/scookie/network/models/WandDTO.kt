@@ -16,7 +16,7 @@ data class WandDTO(
 
 )
 
-fun WandDTO.toModel() = Wand(
+internal fun WandDTO.toModel() = Wand(
     wood = wood,
     core = core,
     length = length

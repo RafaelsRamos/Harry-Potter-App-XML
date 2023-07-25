@@ -67,6 +67,8 @@ data class CharacterDTO(
 
 )
 
+fun List<CharacterDTO>.toModel() = this.map { it.toModel() }
+
 fun CharacterDTO.toModel() = Character(
     id = id,
     name = name,
