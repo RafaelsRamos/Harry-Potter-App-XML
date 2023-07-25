@@ -2,6 +2,8 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.dagger.hilt)
+    kotlin("kapt")
 }
 
 android {
@@ -34,6 +36,21 @@ android {
 }
 
 dependencies {
+
+    kapt(libs.androidx.hilt.compiler)
+    kapt(libs.hilt.android.compiler)
+    kapt(libs.room.compiler)
+
+    implementation(project(":domainmodel"))
+
+    implementation(libs.hilt.android)
+    implementation(libs.hilt.android.compiler)
+
+    implementation(libs.square.converter.gson)
+
+    implementation(libs.room)
+    implementation(libs.room.ktx)
+
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)

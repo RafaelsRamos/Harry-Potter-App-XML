@@ -42,6 +42,7 @@ dependencies {
 
     implementation(project(":domainmodel"))
     implementation(project(":network"))
+    implementation(project(":database"))
 
     implementation(libs.hilt.android)
     implementation(libs.hilt.android.compiler)
